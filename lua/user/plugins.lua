@@ -70,10 +70,13 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use "David-Kunz/cmp-npm"
+  use("quangnguyen30192/cmp-nvim-ultisnips")
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  use "SirVer/ultisnips"
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
@@ -83,6 +86,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  use "olacin/telescope-gitmoji.nvim"
 
   -- Treesitter
   use {
@@ -94,6 +98,9 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
   use "tpope/vim-fugitive"
+
+  -- Go
+  use "fatih/vim-go"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

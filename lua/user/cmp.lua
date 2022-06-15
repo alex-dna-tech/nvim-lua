@@ -1,5 +1,6 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
+  error("Cmp error: " .. cmp)
   return
 end
 
@@ -49,6 +50,7 @@ cmp.setup {
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
+      vim.fn["UltiSnips#Anon"](args.body)
     end,
   },
   mapping = {
@@ -110,10 +112,12 @@ cmp.setup {
     end,
   },
   sources = {
+    { name = "ultisnips" },
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    { name = "npm", keyword_length = 4 },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
