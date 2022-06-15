@@ -92,17 +92,5 @@ telescope.setup({
 		--   extension_config_key = value,
 		-- }
 		-- please take a look at the readme of the extension you want to configure
-		gitmoji = {
-			action = function(entry)
-				vim.ui.input({ prompt = "Enter commit msg: " .. entry.value .. " " }, function(msg)
-					if not msg then
-						return
-					end
-					vim.cmd(':G commit -m "' .. entry.value .. ' ' .. msg .. '"')
-				end)
-			end,
-		},
 	},
 })
-
-telescope.load_extension("gitmoji")

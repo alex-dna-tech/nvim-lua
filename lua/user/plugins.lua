@@ -87,7 +87,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-  use "olacin/telescope-gitmoji.nvim"
+  use "nvim-telescope/telescope-symbols.nvim"
 
   -- Treesitter
   use {
