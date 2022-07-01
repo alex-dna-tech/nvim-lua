@@ -78,3 +78,5 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Refresh config
 keymap("n", "<Leader><CR>", ":so $MYVIMRC<CR>", term_opts)
 
+keymap("c", "w!!", "w !sudo tee % >/dev/null", term_opts)
+

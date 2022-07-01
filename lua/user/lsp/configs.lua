@@ -6,15 +6,13 @@ end
 local lspconfig = require("lspconfig")
 
 local servers = {
+  "sumneko_lua",
   "emmet_ls",
   "eslint",
   "gopls",
   "graphql",
   "html",
   "jsonls",
-  "marksman",
-  "sumneko_lua",
-  "tailwindcss",
   "tsserver",
   "volar",
   "vuels",
